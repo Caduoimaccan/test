@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Sorry Tzi</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: #fdc9d1;
+			font-size: 12px;
+			overflow: auto;
+		}
+
+		#mainDiv {
+			width: 100%;
+			height: 100%;
+			padding-left: 70px;
+			text-align: center;
+			position: relative;
+			/* Để có thể sử dụng position: absolute cho các phần tử bên trong */
+		}
+
+		#loveHeart {
+			width: 200px;
+			height: 200px;
+			padding-top: 20px;
+			/* Giảm khoảng cách phía trên */
+			margin: 0 auto;
+			/* Canh giữa theo chiều ngang */
+		}
+
+		#code {
+			width: 440px;
+			margin: 60px auto;
+			/* Canh giữa và cách phần tử bên trên */
+			color: #18734d;
+			font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+			font-size: 12px;
+			padding-left: 20px;
+		}
+
+		#buttons {
+			margin-top: 20px;
+			/* Khoảng cách giữa GIF và các button */
+		}
+
+		#agreeBtn,
+		#disagreeBtn {
+			padding: 10px 20px;
+			font-size: 16px;
+			cursor: pointer;
+			border: none;
+			color: white;
+			background-color: #409c45;
+			margin: 10px;
+			border-radius: 5px;
+		}
+
+		#disagreeBtn {
+			background-color: #dc3545;
+			/* Màu đỏ cho button Không đồng ý */
+		}
+
+		.shrink {
+			animation: shrink 0.5s forwards;
+		}
+
+		@keyframes shrink {
+			from {
+				transform: scale(1);
+			}
+
+			to {
+				transform: scale(0.5);
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="loveHeart">
+			<img id="gifImage" src="123.gif" alt="GIF Animation" width="200" height="200">
+		</div>
+		<button id="agreeBtn">Yes</button>
+		<button id="disagreeBtn">No</button>
+		<div id="code">
+			<span class="comments"> Tzi cuti</span><br />
+			<span class="comments"> Cho Tsyx xin lỗi nhaaa</span><br />
+			<span class="comments"> Vì hôm qua do hơi mệt </span><br />
+
+			<span class="comments"> 1 tí </span><br />
+
+			<span class="comments"> Nên Tsyx có ngủ quên</span><br />
+
+			<span class="comments"> Để Tzi Cuti chờ</span><br />
+
+			<span class="comments"> Lúc 2h37 -> 2h53</span><br />
+
+			<span class="comments"> 16p đầy lỗi lầm :((</span><br />
+
+			<span class="comments"> Xin lỗi Tzi nhiều nhiều </span><br />
+
+			<span class="comments"> Hứa sau này không zậy nữa he </span><br />
+
+			<span class="comments"> Tha lỗi cho Tsyx nhaaa</span><br />
+
+			<span class="comments"> Không bao giờ có lần sau nữa nhé :33</span><br />
+
+
+			<span class="comments"> Cho Tsyx xin lỗi nhaaa</span><br />
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("agreeBtn").addEventListener("click", function () {
+			document.getElementById("gifImage").src = "124.gif"; // Đổi GIF khi nhấn Đồng Ý
+		});
+
+		document.getElementById("disagreeBtn").addEventListener("click", function () {
+			var btn = document.getElementById("disagreeBtn");
+			var currentScale = btn.style.transform.match(/scale\(([^)]+)\)/);
+			var scale = currentScale ? parseFloat(currentScale[1]) : 1;
+
+			// Thu nhỏ nút mỗi lần nhấn
+			var newScale = Math.max(0.1, scale * 0.9); // Không thu nhỏ quá nhỏ
+			btn.style.transform = `scale(${newScale})`;
+		});
+	</script>
+</body>
+
+</html>
